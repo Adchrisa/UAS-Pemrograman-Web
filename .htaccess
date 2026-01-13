@@ -1,0 +1,49 @@
+# Enable mod_rewrite untuk clean URLs (simplified for InfinityFree)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Set base directory untuk InfinityFree (root, bukan /projek1/)
+    RewriteBase /
+    
+    # Redirect ke HTTPS jika not localhost
+    # Uncomment jika pakai SSL di production
+    # RewriteCond %{HTTPS} off
+    # RewriteCond %{HTTP_HOST} !^localhost
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # Prevent access ke file yang dimulai dengan dot
+    RewriteRule "^\." - [F]
+    
+    # Block access HANYA ke api/connection.php (jangan block includes!)
+    RewriteRule "^api/connection\.php$" - [F]
+    
+    # Disable redirect ke index.php (bikin problem di InfinityFree)
+    # Uncomment jika perlu routing khusus
+    # RewriteCond %{REQUEST_FILENAME} !-f
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteRule ^(.*)$ index.php?page=$1 [QSA,L]
+</IfModule>
+
+# Security Headers (simple version)
+<IfModule mod_headers.c>
+    # Prevent clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # Prevent MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# Disable directory listing
+Options -Indexes
+
+# Enable compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
+</IfModule>
+
+# Allow assets
+<FilesMatch "\.(css|js|jpg|jpeg|png|gif|svg|woff|woff2|ttf)$">
+    <IfModule mod_headers.c>
+        Header set Cache-Control "max-age=604800"
+    </IfModule>
+</FilesMatch>

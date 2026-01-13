@@ -1,0 +1,33 @@
+# Environment Configuration
+.env
+.env.local
+.env.*.local
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Temporary Files
+tmp/
+temp/
+cache/
+
+# PHP
+vendor/
+composer.lock
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Session & Upload Temp
+sessions/
+*.tmp
