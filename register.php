@@ -4,7 +4,6 @@
   <div class="col-md-7">
     <div class="card p-4">
       <h3 class="card-title">Registrasi Akun</h3>
-      <p class="text-muted small mb-3">Buat akun baru untuk mengakses sistem CRUD Cigadung Motorworks</p>
       <form id="registerForm">
         <div class="mb-3">
           <label class="form-label">Nama Lengkap *</label>
