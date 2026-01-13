@@ -66,6 +66,7 @@ Aplikasi manajemen motor dan transaksi dengan dashboard admin, autentikasi user,
 ![image alt](https://github.com/Adchrisa/UAS-Pemrograman-Web/blob/015065d3abd65f501f6121ff07a180c04886553a/Screenshots/3%20(regist).PNG)
 
 4. Login berhasil
+
 ![image alt](https://github.com/Adchrisa/UAS-Pemrograman-Web/blob/015065d3abd65f501f6121ff07a180c04886553a/Screenshots/4%20(login%20berhasil).PNG)
 
 5. Tampilan login sebagai admin, terdapat fitur dashboard khusus untuk admin
