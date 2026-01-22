@@ -55,6 +55,9 @@ Aplikasi manajemen motor dan transaksi dengan dashboard admin, autentikasi user,
    - Password: `admin123`
 
 
+## Video Demo Projek
+https://github.com/user-attachments/assets/ac5248ea-4d90-4cfe-acc9-a162b90f8192
+
 ## Screenshots
 1. Tampilan beranda saat pertama kali buka website
 ![image alt](https://github.com/Adchrisa/UAS-Pemrograman-Web/blob/015065d3abd65f501f6121ff07a180c04886553a/Screenshots/1%20(beranda).PNG)
